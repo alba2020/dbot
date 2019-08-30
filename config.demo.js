@@ -3,6 +3,9 @@
 
 module.exports = {
 
+    // url для mongodb
+    db: '',
+
     guildId: '', // сервер, на котором слушаем
 
     channels: {
