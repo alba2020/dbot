@@ -5,6 +5,8 @@ module.exports = {
 
     // url для mongodb
     db: '',
+    
+    bot_secret_token: '',
 
     guildId: '', // сервер, на котором слушаем
 
@@ -23,5 +25,4 @@ module.exports = {
         moderator: '',
         eventHost: '',
     }
-
 }

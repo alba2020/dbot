@@ -1,11 +1,13 @@
 const Discord = require('discord.js')
 const mongoose = require('mongoose')
 
+const config = require('./config')
+
 const client = new Discord.Client()
 client.commands = {}
 
 mongoose.connect(
-    'mongodb+srv://trash:secret123@cluster0-off3z.mongodb.net/apple?retryWrites=true&w=majority',
+    config.db,
     { useNewUrlParser: true, useCreateIndex: true }
 ).then (conn => {
     console.log('DB connected')
@@ -50,6 +52,6 @@ function login() {
     // // Get your bot's secret token from:
     // // https://discordapp.com/developers/applications/
     // // Click on your application -> Bot -> Token -> "Click to Reveal Token"
-    bot_secret_token = "NjExNjY1MDU4ODM3MDM3MDY2.XVXIYw.wwFbaBL3NsrfCHyeSL73VvVaifM"
-    client.login(bot_secret_token)
+
+    client.login(config.bot_secret_token)
 }
